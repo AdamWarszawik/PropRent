@@ -1,0 +1,89 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<div class="row">
+	<div class="col-md-6 offset-md-3 mb-5">
+		<div class="card shadow">
+			<div class="card-body">
+				<h1 class="text-center">New Propoerty</h1>
+				<form
+					action="/properties"
+					method="POST"
+					novalidate
+					class="validated-form"
+					enctype="multipart/form-data">
+					<div class="mb-3">
+						<label class="form-label" for="title">Title</label>
+						<input
+							class="form-control"
+							type="text"
+							id="title"
+							name="property[title]"
+							required />
+						<div class="valid-feedback">Looks Good!</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="location">Location</label>
+						<input
+							class="form-control"
+							type="text"
+							id="location"
+							name="property[location]"
+							required />
+						<div class="valid-feedback">Looks Good!</div>
+					</div>
+
+					<!-- Upload a file (image) -->
+					<div class="mb-3">
+						<label for="image" class="form-label">Upload images</label>
+						<input
+							class="form-control"
+							type="file"
+							id="image"
+							name="image"
+							multiple
+							required
+							disabled />
+						<div class="invalid-feedback">
+							This listing would look much better with a picture.
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="price">Price</label>
+						<div class="input-group">
+							<span class="input-group-text" id="price-label">$</span>
+							<input
+								id="price"
+								type="number"
+								min="0.01"
+								step="0.01"
+								class="form-control"
+								placeholder="0.00"
+								aria-label="price"
+								aria-describedby="price-label"
+								name="property[price]"
+								required />
+							<div class="valid-feedback">Looks Good!</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="description">Description</label>
+						<textarea
+							class="form-control"
+							type="text"
+							id="description"
+							name="property[description]"
+							required>
+						</textarea>
+						<div class="valid-feedback">Looks Good!</div>
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-success">Add Property</button>
+					</div>
+				</form>
+				<div class="mb-3">
+					<a href="/properties">All Properties</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+.navbar {
+	padding-bottom: 250px;
+}
+
+main {
+	margin-top: -200px;
+	z-index: 1040;
+	margin-bottom: 2.5rem;
+	padding-inline: 3rem;
+}
+
+.footer {
+	margin-top: auto;
+	text-align: center;
+}
