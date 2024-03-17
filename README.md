@@ -2,6 +2,11 @@
 
 Project to create website similar to airbnb
 
+## Todo
+* Refactor to react
+* fix css
+* add more features
+
 ## Installation
 
 Clone repo
